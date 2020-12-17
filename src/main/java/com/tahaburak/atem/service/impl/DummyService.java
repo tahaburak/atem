@@ -29,7 +29,7 @@ public class DummyService implements IDummyService {
   @Override
   public User getDummyUserById(Long id) {
     log.info("generating the dummy user with id: " + id);
-    return User.builder().name(faker.name().firstName()).surname(faker.name().lastName()).build();
+    return User.builder().id(id).name(faker.name().firstName()).surname(faker.name().lastName()).build();
 
   }
 }
